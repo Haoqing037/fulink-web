@@ -1,5 +1,6 @@
 import { Routes, Route, Link, NavLink, useLocation } from 'react-router-dom'
 import './App.css'
+import './navbar.css'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
