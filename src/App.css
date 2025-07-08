@@ -220,20 +220,69 @@ body::before {
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+/* 全局样式 */
 .page {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-.page h2 {
-  font-size: clamp(1.3rem, 4vw, 2.2rem);
-  font-weight: 600;
-  margin-bottom: 16px;
+/* Banner 区块样式 */
+.banner {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 4rem;
 }
 
+.banner h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: #1a365d;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.banner p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #2d3748;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: rgba(100, 108, 255, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta:hover {
+  background: rgba(83, 91, 242, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+  color: white;
+}
+
+/* 套餐卡片样式 */
 .price-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -243,20 +292,25 @@ body::before {
 
 .plan-card {
   padding: 2rem;
-  border: 1px solid #eee;
-  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .plan-card--highlight {
   transform: scale(1.02);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .plan-card h3 {
   margin-top: 0;
   font-size: 1.8rem;
-  color: #333;
+  color: #1a365d;
 }
 
 .plan-card ul {
@@ -267,30 +321,36 @@ body::before {
 
 .plan-card li {
   margin-bottom: 1rem;
-  color: #666;
+  color: #2d3748;
 }
 
 .plan-card b {
-  color: #333;
+  color: #1a365d;
 }
 
 .plan-buy {
   display: block;
   text-align: center;
   padding: 1rem;
-  background: #646cff;
+  background: rgba(100, 108, 255, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: white;
   border-radius: 0.5rem;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .plan-buy:hover {
-  background: #535bf2;
+  background: rgba(83, 91, 242, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
   color: white;
 }
 
+/* 特色区块样式 */
 .features {
   padding: 4rem 0;
 }
@@ -298,6 +358,8 @@ body::before {
 .features h2 {
   text-align: center;
   margin-bottom: 3rem;
+  color: #1a365d;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .features-list {
@@ -309,6 +371,18 @@ body::before {
 .feature-item {
   text-align: center;
   padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .feature-icon {
@@ -320,13 +394,14 @@ body::before {
 .feature-title {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #1a365d;
 }
 
 .feature-desc {
-  color: #666;
+  color: #2d3748;
 }
 
+/* 场景区块样式 */
 .scenarios {
   padding: 4rem 0;
 }
@@ -334,6 +409,8 @@ body::before {
 .scenarios h2 {
   text-align: center;
   margin-bottom: 3rem;
+  color: #1a365d;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .scenarios-list {
@@ -345,16 +422,31 @@ body::before {
 .scenario-item {
   text-align: center;
   padding: 2rem;
-  background: #f5f7fa;
-  border-radius: 1rem;
+  background: rgba(245, 247, 250, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-weight: 500;
-  color: #333;
+  color: #1a365d;
+  transition: all 0.3s;
 }
 
+.scenario-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: rgba(245, 247, 250, 0.95);
+}
+
+/* 底部信息区块样式 */
 .footer-info {
-  background: #f5f7fa;
+  background: rgba(245, 247, 250, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 4rem 2rem 2rem;
   margin-top: auto;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-sections {
@@ -368,7 +460,8 @@ body::before {
 .footer-col h3 {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #1a365d;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .footer-col ul {
@@ -379,11 +472,11 @@ body::before {
 
 .footer-col li {
   margin-bottom: 1rem;
-  color: #666;
+  color: #2d3748;
 }
 
 .footer-col p {
-  color: #666;
+  color: #2d3748;
   line-height: 1.6;
 }
 
@@ -395,40 +488,51 @@ body::before {
 .subscribe-form input {
   flex: 1;
   padding: 0.8rem;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .subscribe-form button {
   padding: 0.8rem 1.5rem;
-  background: #646cff;
+  background: rgba(100, 108, 255, 0.9);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: white;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .subscribe-form button:hover {
-  background: #535bf2;
+  background: rgba(83, 91, 242, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
 }
 
 .footer-copyright {
   text-align: center;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #ddd;
-  color: #999;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: #718096;
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
   .page {
     padding: 1rem;
+    margin: 1rem;
+    border-radius: 12px;
   }
   
   .banner {
     padding: 2rem 1rem;
+    margin: 0 0 2rem 0;
   }
   
   .banner h1 {
@@ -458,6 +562,14 @@ body::before {
   .plan-card {
     margin: 1rem 0;
   }
+}
+
+/* 添加背景渐变 */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .home-page,
@@ -506,95 +618,6 @@ body::before {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
-}
-
-.banner {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 1rem;
-  margin-bottom: 4rem;
-}
-
-.banner h1 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-
-.banner p {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  color: #666;
-}
-
-.cta {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: #646cff;
-  color: white;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.cta:hover {
-  background: #535bf2;
-  color: white;
-}
-
-.plans-desc {
-  text-align: center;
-  color: #555;
-  font-size: 1.08rem;
-  margin-bottom: 2vw;
-}
-.plans-tips {
-  margin-top: 2vw;
-  color: #888;
-  font-size: 0.98rem;
-  text-align: center;
-}
-.plans-tips p {
-  margin: 0.3vw 0;
-}
-
-.checkout-submit {
-  width: 100%;
-  padding: 10px 0;
-  background: #0071e3;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.2s;
-}
-.checkout-submit:hover {
-  background: #005bb5;
-}
-.checkout-success {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #0071e3;
-  margin-top: 3vw;
-}
-@media (max-width: 600px) {
-  .checkout-form {
-    padding: 16px 6px;
-    max-width: 98vw;
-  }
-}
-
-.home-page {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3vw;
 }
 
 .banner, .home-plans, .scenarios, .features, .footer-info {
